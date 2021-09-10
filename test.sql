@@ -9,4 +9,5 @@ SELECT TOP (1000) [id]
       ,[channel4]
       ,[error]
   FROM [WERMAWIN].[dbo].[slaveData]
+  
 
