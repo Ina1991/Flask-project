@@ -1,4 +1,4 @@
-SELECT TOP (1000) [id]
+SELECT Top (100) [id]
       ,[slaveId]
       ,[datStart]
       ,[datEnd]

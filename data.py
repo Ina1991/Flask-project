@@ -1,21 +1,13 @@
-#Connect via Flask_SQLAlchemy
-
-from flask import Flask, jsonify, request
+# coding: utf-8
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.sql import func
 
-app = Flask(__name__, static_url_path='', static_folder='static')
-db_URI = "mssql+pyodbc://sa:123@vulkan"
-app.config['SQLALCHEMY_DATABASE_URI'] =db_URI
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_ECHO']=True
 
-# 在扩展类实例化前加载配置
-db = SQLAlchemy(app)
+db = SQLAlchemy()
 
-# 声明模型类 建立与slaveData 表结构一致的数据表
-class SlaveCopy(db.Model):
-    __tablename__ = 'datacopy'
+
+
+class SlaveDatum(db.Model):
+    __tablename__ = 'slaveData'
     __table_args__ = (
         db.Index('slaveDataSlaveId', 'slaveId', 'datEnd'),
     )
@@ -30,12 +22,3 @@ class SlaveCopy(db.Model):
     channel3 = db.Column(db.SmallInteger, nullable=False, server_default=db.FetchedValue())
     channel4 = db.Column(db.SmallInteger, nullable=False, server_default=db.FetchedValue())
     error = db.Column(db.Boolean, nullable=False, server_default=db.FetchedValue())
-
-
-@app.route("/")
-def index():
-    return "hello"
-
-# 
-
-
