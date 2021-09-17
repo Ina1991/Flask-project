@@ -8,6 +8,7 @@ SELECT Top (100) [id]
       ,[channel3]
       ,[channel4]
       ,[error]
+  INTO [WERMAWIN].[dbo].[datacopy]
   FROM [WERMAWIN].[dbo].[slaveData]
   
 
