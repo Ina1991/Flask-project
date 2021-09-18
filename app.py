@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Connect via Flask_SQLAlchemy
 
 from flask import Flask, jsonify, request
@@ -14,7 +15,7 @@ app.config['SQLALCHEMY_ECHO']=True
 db = SQLAlchemy(app)
 
 # 声明模型类 建立与slaveData 表结构一致的数据表
-class SlaveCopy(db.Model):
+class DataCopy(db.Model):
     __tablename__ = 'datacopy'
     __table_args__ = (
         db.Index('slaveDataSlaveId', 'slaveId', 'datEnd'),
@@ -51,6 +52,13 @@ class SlaveData(db.Model):
 @app.route("/")
 def index():
     return "hello"
+
+from app import SlaveData, DataCopy
+data=SlaveData.query.all()
+
+
+
+
 
 
 
