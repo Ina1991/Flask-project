@@ -31,9 +31,12 @@ class DataCopy(db.Model):
     channel3 = db.Column(db.SmallInteger, nullable=False, server_default=db.FetchedValue())
     channel4 = db.Column(db.SmallInteger, nullable=False, server_default=db.FetchedValue())
     error = db.Column(db.Boolean, nullable=False, server_default=db.FetchedValue())
+    
+    def __repr__(self):
+        return '<Datacopy %r>' % self.username
 
-class SlaveData(db.Model):
-    __tablename__ = 'slaveData'
+class AndonData(db.Model):
+    __tablename__ = 'andonData'
     __table_args__ = (
         db.Index('slaveDataSlaveId', 'slaveId', 'datEnd'),
     )
@@ -53,8 +56,24 @@ class SlaveData(db.Model):
 def index():
     return "hello"
 
-from app import SlaveData, DataCopy
-data=SlaveData.query.all()
+from app import AndonData, DataCopy
+dat1='2021-09-08 10：59：49'
+dat2='2021-09-08 11：20：00'
+
+sq1='''
+    INSERT INTO [WERMAWIN].[dbo].[Datacopy]
+    SELECT *
+    FROM [WERMAWIN].[dbo].[AndonData]
+    WHERE datEnd between '2021-09-08 10：59：49' and '2021-09-08 11：20：00'
+    '''
+
+result=db.engine.execute(sq1)
+
+
+
+
+
+
 
 
 

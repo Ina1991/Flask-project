@@ -1,0 +1,1 @@
+TRUNCATE TABLE [WERMAWIN].[dbo].[dataCopy]
