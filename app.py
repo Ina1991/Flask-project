@@ -32,8 +32,8 @@ class DataCopy(db.Model):
     channel4 = db.Column(db.SmallInteger, nullable=False, server_default=db.FetchedValue())
     error = db.Column(db.Boolean, nullable=False, server_default=db.FetchedValue())
     
-    def __repr__(self):
-        return '<Datacopy %r>' % self.username
+    # def __repr__(self):
+    #     return '<Datacopy %r>' % self.username
 
 class AndonData(db.Model):
     __tablename__ = 'andonData'
@@ -60,14 +60,14 @@ from app import AndonData, DataCopy
 dat1='2021-09-08 10：59：49'
 dat2='2021-09-08 11：20：00'
 
-sq1='''
-    INSERT INTO [WERMAWIN].[dbo].[Datacopy]
-    SELECT *
-    FROM [WERMAWIN].[dbo].[AndonData]
-    WHERE datEnd between '2021-09-08 10：59：49' and '2021-09-08 11：20：00'
-    '''
+# sq1='''
+#     INSERT INTO [WERMAWIN].[dbo].[Datacopy]
+#     SELECT *
+#     FROM [WERMAWIN].[dbo].[AndonData]
+#     WHERE datEnd between '2021-09-08 10：59：49' and '2021-09-08 11：20：00'
+#     '''
 
-result=db.engine.execute(sq1)
+# result=db.engine.execute(sq1)
 
 
 
