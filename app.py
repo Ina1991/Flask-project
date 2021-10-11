@@ -56,9 +56,9 @@ class AndonData(db.Model):
 def index():
     return "hello"
 
-from app import AndonData, DataCopy
-dat1='2021-09-08 10：59：49'
-dat2='2021-09-08 11：20：00'
+# from app import AndonData, DataCopy
+# dat1='2021-09-08 10：59：49'
+# dat2='2021-09-08 11：20：00'
 
 # sq1='''
 #     INSERT INTO [WERMAWIN].[dbo].[Datacopy]
