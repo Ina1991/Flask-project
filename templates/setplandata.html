@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- IE将使用最新的引擎渲染网页 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 页面的宽度与设备屏幕的宽度一致,初始缩放比例 1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Settings</title>
+
+    <!--Extneral stylesheets and javascript-->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/theme.css">
+    <script type="text/javascript" src="../static/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bootstrap theme</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+      <form method="POST" action="/">
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h2>计划生产参数设置 Scheduled Production Parameter Setting</h2><br>
+        <p>请在下表内准确输入各类计划内停台时间与额定班产量。
+        <br>Please enter the exact planned downtime and rated shift production for each category in the table below.</p>
+      </div>
+
+      <!-- <div class="page-header">
+        <h3>总工作时间 Total working hours</h3>
+      </div>
+      <div class="col-sm-3">
+        <input type="number" id="number1" name="number1" value=0>
+      </div>
+      <br>
+      <div class="page-header">
+        <h3>计划内停台时间 Planned Downtime</h3>
+      </div> -->
+      <!-- <div class="row">
+        <div class="col-md-8">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>项目Items</th>
+                <th>停台时间 Downtime(min)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>日常维护保养停台时间 Daily maintenance(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>吃饭停台时间 Mealtime(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>计划内休息停台时间 Planned resting(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>换模/烘模/试模时间 Plan the mold change time(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>计划内维保停台时间 Plan maintenance(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>5S停台时间 5S time(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>交接班停台时间 Shift time(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>达产后停台时间 Stop after the output is reached(min)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>其他计划中规定停台时间 Other planned downtime(min)</td>
+                <td></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+      <!-- <div class="page-header">
+        <h3>额定班产量（=实际运转时间/CT） Standard rated output</h3>
+      </div> -->
+    
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">总工作时间 Total working hours(s)</h3>
+            </div>
+            <div class="panel-body">
+              <input type="number" id="num_total_working" name="num_total_working" value=0>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">额定班产量（=实际运转时间/CT） Standard rated output</h3>
+            </div>
+            <div class="panel-body">
+              <input type="number" id="num_standard_output" name="num_standard_output" value=0>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+        <div class="col-md-8">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">计划内停台时间 Planned Downtime</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>项目Items</th>
+                    <th>停台时间 Downtime(min)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>日常维护保养停台时间 Daily maintenance(min)</td>
+                    <td>
+                      <input type="number" id="num_daily_main" name="num_daily_main" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>吃饭停台时间 Mealtime(min)</td>
+                    <td>
+                      <input type="number" id="num_mealtime" name="num_mealtime" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>计划内休息停台时间 Planned resting(min)</td>
+                    <td>
+                      <input type="number" id="num_plan_rest" name="num_plan_rest" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>换模/烘模/试模时间 Plan the mold change time(min)</td>
+                    <td>
+                      <input type="number" id="num_plan_mold" name="num_plan_mold" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>计划内维保停台时间 Plan maintenance(min)</td>
+                    <td>
+                      <input type="number" id="num_plan_main" name="num_plan_main" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>5S停台时间 5S time(min)</td>
+                    <td>
+                      <input type="number" id="num_5s" name="num_5s" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>交接班停台时间 Shift time(min)</td>
+                    <td>
+                      <input type="number" id="num_shift" name="num_shift" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>达产后停台时间 Stop after the output is reached(min)</td>
+                    <td>
+                      <input type="number" id="num_stop_reach" name="num_stop_reach" value=0>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>其他计划中规定停台时间 Other planned downtime(min)</td>
+                    <td>
+                      <input type="number" id="num_plan_others" name="num_plan_others" value=0>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </div><!-- /.col-sm-4 -->
+        
+      </div>
+      <!-- <div class="row"> -->
+        <!-- <div class="col-md-3">
+        </div> -->
+      <p style="text-align: center;">
+        <button type="submit" class="btn btn-success" style="width: 150px;height: 50px;" value="Submit_settings">提交 Submit</button>       
+      </p>
+      <!-- <div class="col-md-3">
+      </div> -->
+      
+      <!-- </div> -->
+      </form>
+
+
+
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
+    <!-- <script src="../../assets/js/docs.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- IE将使用最新的引擎渲染网页 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 页面的宽度与设备屏幕的宽度一致,初始缩放比例 1:1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Status of equipments</title>
+
+    <!--Extneral stylesheets and javascript-->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <script type="text/javascript" src="../static/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bootstrap theme</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+    <form method="POST" action="/">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li>工厂地点 Factory Location:</li>
+                    <li><h4>VCN</h4></li>
+                    <li>设备名称 Equipment Name:</li>
+                    <li><h4>精密数控纵切车床BO203-2</h4></li>
+                    <li>设备编号Equipment Number:</li>
+                    <li><h4>WV2018M12</h4></li>
+                    <li>日期 Date:</li>
+                    <li><h4>16.09.2021</h4></li>
+                    <li>班次 Shift:</li>
+                    <li><h4>早班 Fore shift</h4></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h2 class="page-header">当前班次设备状态汇总 <br>Summary of current shift equipment status</h2>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1,001</td>
+                                <td>Lorem</td>
+                                <td>ipsum</td>
+                                <td>dolor</td>
+                                <td>sit</td>
+                            </tr>
+                            <tr>
+                                <td>1,002</td>
+                                <td>amet</td>
+                                <td>consectetur</td>
+                                <td>adipiscing</td>
+                                <td>elit</td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>Integer</td>
+                                <td>nec</td>
+                                <td>odio</td>
+                                <td>Praesent</td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>libero</td>
+                                <td>Sed</td>
+                                <td>cursus</td>
+                                <td>ante</td>
+                            </tr>
+                            <tr>
+                                <td>1,015</td>
+                                <td>sodales</td>
+                                <td>ligula</td>
+                                <td>in</td>
+                                <td>libero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+        
+        <p style="text-align: center;">
+            <button type="submit" class="btn btn-success" style="width: 150px;height: 50px;" value="Submit2">提交 Submit</button>       
+        </p>
+        
+    </form>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
+    <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
+    <!-- <script src="../../assets/js/docs.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+</body>
+</html>

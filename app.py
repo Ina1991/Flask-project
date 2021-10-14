@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #Connect via Flask_SQLAlchemy
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request,render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import func
 
@@ -52,10 +52,21 @@ class AndonData(db.Model):
     channel4 = db.Column(db.SmallInteger, nullable=False, server_default=db.FetchedValue())
     error = db.Column(db.Boolean, nullable=False, server_default=db.FetchedValue())
 
-@app.route("/")
-def index():
-    return "hello"
+# @app.route("/")
+# def index():
+#     return "hello"
 
+@app.route('/setplandata', methods=['POST'])
+def setplandata():
+    return render_template('setplandata.html')
+
+@app.route('/', methods=['GET','POST'])
+def index():
+    return render_template('index.html')
+
+@app.route('/status_input', methods=['GET','POST'])
+def status_input():
+    return render_template('status_input.html')
 # from app import AndonData, DataCopy
 # dat1='2021-09-08 10：59：49'
 # dat2='2021-09-08 11：20：00'
@@ -69,7 +80,7 @@ def index():
 
 # result=db.engine.execute(sq1)
 
-
+historys = .query.filter(History.date.between(firstDay, lastDay)).all()
 
 
 
